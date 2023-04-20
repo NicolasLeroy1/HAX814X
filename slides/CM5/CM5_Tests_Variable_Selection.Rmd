@@ -1966,10 +1966,9 @@ apply(all_stats[, -ncol(all_stats)], 2,
 
 ## Variable selection - Advertising data {.smaller}
 
-```{r test19, message = FALSE}
+```{r test19, message=FALSE}
 ## Advertising data
-library(here)
-ad <- read.csv(here("data", "Advertising.csv"), row.names = "X")
+ad <- read.csv("data/Advertising.csv", row.names = "X")
 
 ## Apply stats to all possible combinations
 all_stats <- get_all_stats(ad[, c(4, 1:3)])
